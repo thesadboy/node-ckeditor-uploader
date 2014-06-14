@@ -9,6 +9,8 @@ Ckeditor是一个不错的在线编辑器，但是却不提供上传元素.
 
 node_ckeditor_uploader.js是一个为Ckeditor添加上传控件的扩展代码, 添加了向服务器提交图片的功能, 并保持了Ckeditor原程序的图片处理功能.
 
+node_ckeditor_uploader.js扩展了“dialogDefinition”对话框渲染事件，其他的配置仍然遵循官网方式.
+
 ##屏幕截图
 
 ![screenshot](http://d2.freep.cn/3tb_140614203123qmef533354.png)
