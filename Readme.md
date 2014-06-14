@@ -28,22 +28,23 @@ node_ckeditor_uploader.js是一个为Ckeditor添加上传控件的扩展代码, 
 
 2.导入文件
 
-<script src="http://127.0.0.1:8800/js/ckeditor/ckeditor.js"></script>
-<script src="http://127.0.0.1:8800/js/node_ckeditor_uploader.js"></script>
+`<script src="http://127.0.0.1:8800/js/ckeditor/ckeditor.js"></script>`
+`<script src="http://127.0.0.1:8800/js/node_ckeditor_uploader.js"></script>`
 
 3.配置
 
 * html模板
-<form id="new-blog-form" data-image-action="/{{username}}/image/new" action="/{{username}}/blog/new" method="post">
+`<form id="new-blog-form" data-image-action="/{{username}}/image/new" action="/{{username}}/blog/new" method="post">
     <input name="title" placeholder="标题"/>
     <textarea name="text" class="ckeditor"></textarea>
     <button>发布</button>
-</form>
+</form>`
 
 * 后端
-res.end('<div id="ckeditor_src" data-src="http://127.0.0.1:8800/images/lili/0f72277c698b97476c98e15f8c4665bd.jpg"></div>');
+`res.end('<div id="ckeditor_src" data-src="http://127.0.0.1:8800/images/lili/0f72277c698b97476c98e15f8c4665bd.jpg"></div>');`
 
 * 前端配置
+`
 window.addEventListener('load', function () {
     CKEDITOR.extendCKEDITOR({
         actionUrl: document.getElementById('new-blog-form').getAttribute('data-image-action'),
@@ -51,7 +52,7 @@ window.addEventListener('load', function () {
         responseAttr: 'data-src'
     }, 'ckeditor_src', 'data-src');
     //CKEDITOR.replace('text');
-}, false);
+}, false);`
 
 当点击“浏览文件...”按钮的时候，自动触发change事件，并向服务器上传文件.
 
