@@ -120,14 +120,3 @@ CKEDITOR.extendCKEDITOR = function (options) {
     });
 }
 }(CKEDITOR));
-
-
-window.addEventListener('load', function () {
-    CKEDITOR.extendCKEDITOR({
-        actionUrl: document.getElementById('new-blog-form').getAttribute('data-image-action'),
-        responseId: 'ckeditor_src',
-        responseAttr: 'data-src'
-    }, 'ckeditor_src', 'data-src');
-    //CKEDITOR.replace('text');
-}, false);
-
