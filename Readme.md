@@ -45,7 +45,7 @@ node_ckeditor_uploader.js是一个为Ckeditor添加上传控件的扩展代码, 
 // 返回响应，传送已保存图片的路径
 var id = 'ckeditor_src';
 var data_src = 'http://127.0.0.1:8800/images/lili/0f72277c698b97476c98e15f8c4665bd.jpg'
-res.end('<div id=id data-src=data_src></div>');
+res.end('<div id=' + id + 'data-src=' + data_src + '></div>');
 ```
 
 ####配置前端
@@ -62,7 +62,7 @@ window.addEventListener('load', function () {
         actionUrl: document.getElementById('new-blog-form').getAttribute('data-image-action'),
         responseId: 'ckeditor_src',
         responseAttr: 'data-src'
-    }, 'ckeditor_src', 'data-src');
+    });
 }, false);
 ```
 当点击“浏览文件...”按钮的时候，自动触发change事件，并向服务器上传文件. 
