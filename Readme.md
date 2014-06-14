@@ -26,16 +26,7 @@ node_ckeditor_uploader.js是一个为Ckeditor添加上传控件的扩展代码, 
 
 官网下载CKEDITOR http://ckeditor.com/download
 
-###导入文件
-
-```sh
-<script src="http://127.0.0.1:8800/js/ckeditor/ckeditor.js"></script>
-```
-```sh
-<script src="http://127.0.0.1:8800/js/node_ckeditor_uploader.js"></script>
-```
-
-###配置html模板
+####配置html模板
 ```sh
 // 最重要的是"textarea"元素, 设置class为ckeditor
 <form id="new-blog-form" data-image-action="/{{username}}/image/new" action="/{{username}}/blog/new" method="post">
@@ -45,7 +36,7 @@ node_ckeditor_uploader.js是一个为Ckeditor添加上传控件的扩展代码, 
 </form>
 ```
 
-###配置服务器端
+####配置服务器端
 ```sh
 // 收到请求, 保存图片
 // ...
@@ -55,7 +46,15 @@ var data_src = 'http://127.0.0.1:8800/images/lili/0f72277c698b97476c98e15f8c4665
 res.end('<div id=id data-src=data_src></div>');
 ```
 
-###配置前端
+####配置前端
+
+导入文件
+```sh
+<script src="http://127.0.0.1:8800/js/ckeditor/ckeditor.js"></script>
+```
+```sh
+<script src="http://127.0.0.1:8800/js/node_ckeditor_uploader.js"></script>
+```
 ```sh
 window.addEventListener('load', function () {
     CKEDITOR.extendCKEDITOR({
