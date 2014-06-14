@@ -63,8 +63,8 @@ window.addEventListener('load', function () {
     }, 'ckeditor_src', 'data-src');
 }, false);
 ```
-
 当点击“浏览文件...”按钮的时候，自动触发change事件，并向服务器上传文件.
+CKEDITOR.extendCKEDITOR函数的参数配置:
 
 * actionUrl 上传文件的服务器路由，nodejs服务器应该对actionUrl路由提供保存文件，返回保存的文件路径.
 返回的文件路径应该保存一个div元素的data-src属性中，并设置id.
