@@ -47,7 +47,9 @@ node_ckeditor_uploader.js是一个为Ckeditor添加上传控件的扩展代码, 
 ```
 
 * 后端
-`res.end('<div id="ckeditor_src" data-src="http://127.0.0.1:8800/images/lili/0f72277c698b97476c98e15f8c4665bd.jpg"></div>');`
+```sh
+res.end('<div id="ckeditor_src" data-src="http://127.0.0.1:8800/images/lili/0f72277c698b97476c98e15f8c4665bd.jpg"></div>');
+```
 
 * 前端配置
 ```sh
