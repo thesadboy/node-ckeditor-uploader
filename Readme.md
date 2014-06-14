@@ -29,7 +29,8 @@ node_ckeditor_uploader.js是一个为Ckeditor添加上传控件的扩展代码, 
 
 ####配置html模板
 ```sh
-// 最重要的是"textarea"元素, 设置class为ckeditor
+// 最重要的是"textarea"元素
+// 设置class=ckeditor, CKEDITOR会自动为其渲染编辑器形状
 <form id="new-blog-form" data-image-action="/{{username}}/image/new" action="/{{username}}/blog/new" method="post">
     <input name="title" placeholder="标题"/>
     <textarea name="text" class="ckeditor"></textarea>
