@@ -48,7 +48,6 @@ res.end('<div id=id data-src=data_src></div>');
 
 ####配置前端
 
-导入文件
 ```sh
 <script src="http://127.0.0.1:8800/js/ckeditor/ckeditor.js"></script>
 ```
