@@ -1,4 +1,4 @@
-###NODE CKEDITOR UPLOADER
+#NODE CKEDITOR UPLOADER
 
 tulayang
 itulayangi@gmail.com
@@ -8,7 +8,7 @@ itulayangi@gmail.com
 Ckeditor是一个不错的在线编辑器，但是却不提供上传元素.
 node_ckeditor_uploader.js是一个为Ckeditor添加上传控件的扩展代码, 添加了向服务器提交图片的功能, 并保持了Ckeditor原程序的图片处理功能.
 
-####屏幕截图
+##屏幕截图
 
 ![screenshot](http://d2.freep.cn/3tb_140614203123qmef533354.png)
 
@@ -22,7 +22,7 @@ node_ckeditor_uploader.js是一个为Ckeditor添加上传控件的扩展代码, 
 
 ![screenshot](http://d3.freep.cn/3tb_140614203124e07n533354.png)
 
-####如何使用
+##如何使用
 
 1.官网下载CKEDITOR http://ckeditor.com/download
 
@@ -37,7 +37,7 @@ node_ckeditor_uploader.js是一个为Ckeditor添加上传控件的扩展代码, 
 
 3.配置
 
-* html模板
+#### html模板
 ```sh
 // 最重要的是"textarea"元素, 设置class为ckeditor
 <form id="new-blog-form" data-image-action="/{{username}}/image/new" action="/{{username}}/blog/new" method="post">
@@ -47,7 +47,7 @@ node_ckeditor_uploader.js是一个为Ckeditor添加上传控件的扩展代码, 
 </form>
 ```
 
-* 后端
+#### 后端
 ```sh
 // 收到请求, 保存图片
 // ...
@@ -57,7 +57,7 @@ var data_src = 'http://127.0.0.1:8800/images/lili/0f72277c698b97476c98e15f8c4665
 res.end('<div id=id data-src=data_src></div>');
 ```
 
-* 前端配置
+#### 前端配置
 ```sh
 window.addEventListener('load', function () {
     CKEDITOR.extendCKEDITOR({
