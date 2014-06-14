@@ -28,8 +28,8 @@ node_ckeditor_uploader.js是一个为Ckeditor添加上传控件的扩展代码, 
 
 2.导入文件
 
-`<script src="http://127.0.0.1:8800/js/ckeditor/ckeditor.js"></script>`
-`<script src="http://127.0.0.1:8800/js/node_ckeditor_uploader.js"></script>`
+```<script src="http://127.0.0.1:8800/js/ckeditor/ckeditor.js"></script>```
+```<script src="http://127.0.0.1:8800/js/node_ckeditor_uploader.js"></script>```
 
 3.配置
 
