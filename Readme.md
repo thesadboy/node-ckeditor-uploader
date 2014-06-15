@@ -67,10 +67,12 @@ window.addEventListener('load', function () {
     });
 }, false);
 ```
-当点击“浏览文件...”按钮的时候，自动触发change事件，并向服务器上传文件. 
+##逻辑流程
+当点击`浏览文件...`按钮的时候，自动触发change事件，并向服务器上传文件. 
+服务器接受传送的请求体，保存图片，并把保存后的图片路径，挂到div元素上，发回客户端.
+编辑器接受响应后，自动设置URL为图片路径，应用编辑器内核图片处理功能.
 
-CKEDITOR.extendCKEDITOR函数的参数配置:
-
+####CKEDITOR.extendCKEDITOR函数的参数配置
 * actionUrl 上传文件的服务器路由，nodejs服务器应该对actionUrl路由提供保存文件，返回保存的文件路径.
 返回的文件路径应该保存一个div元素的data-src属性中，并设置id.
 
